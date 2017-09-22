@@ -10,37 +10,45 @@ namespace testProject
     {
         static void Main(string[] args)
         {
-            int num1;
-            int num2;
             Char op;
-            Double result=0;
-            Console.Write("Please enter an operator: ");
+            string[] input;
+            int result = 0;
+            int number;
+            Boolean firstNumLoaded = false;
+
+            Console.Write("Please select an operator: ");
             op = Console.ReadLine().ToCharArray()[0];
-            Console.Write("Please enter a number: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Please enter another number: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please enter space seperated numbers: ");
+            input = Console.ReadLine().Split(' ');
 
-            switch (op)
+            foreach(string numberSTR in input)
             {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '/':
-                    result = num1 / num2;
-                    break;
-                case '*':
-                    result = num1 / num2;
-                    break;
-                default:
-                    Console.WriteLine("Invalid Operator.");
-                    break;
+                number = Convert.ToInt32(numberSTR);
+                //loads only the first number into result, skipping the switch
+                //used to allow multiplication and division to return values other than 0
+                if (!firstNumLoaded)
+                {
+                    result = number;
+                    firstNumLoaded = true;
+                    continue;
+                }
+                switch (op)
+                {
+                    case '+':
+                        result += Convert.ToInt32(number);
+                        break;
+                    case '-':
+                        result -= Convert.ToInt32(number);
+                        break;
+                    case '*':
+                        result = result * Convert.ToInt32(number);
+                        break;
+                    case '/':
+                        result = result / Convert.ToInt32(number);
+                        break;
+                }
             }
-
-            Console.WriteLine("The solution is: {0}", result);
+            Console.WriteLine("The result of this calculation is: {0}", result);
             Console.ReadLine();
         }
     }
