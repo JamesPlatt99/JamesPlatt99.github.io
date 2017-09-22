@@ -10,7 +10,7 @@ namespace testProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is a test");
+            Console.WriteLine("The file has been altered, pray I do not alter it further.");
             Console.ReadLine();
         }
     }
