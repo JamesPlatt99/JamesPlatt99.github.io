@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace testProject
 {
@@ -21,6 +17,9 @@ namespace testProject
 
             Console.WriteLine();
             Console.WriteLine("Your new date is {0:D}.", calcNewDate(Date, daysToAdd));
+
+            Program.logger.WriteText(Date + " + " + daysToAdd);
+            Program.logger.WriteText(calcNewDate(Date, daysToAdd).ToString());
         }
 
         DateTime getDateTime(ref Boolean valid)

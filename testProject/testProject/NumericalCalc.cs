@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace testProject
 {
@@ -12,9 +9,10 @@ namespace testProject
     {        
         public  void StartNumCalc()
         {
-            Char[] operators = new char[0];
-            int[] numbers = new int[0];
-            String[] inputTMP;
+            List<Char> operators = new List<Char>();
+            List<int> numbers = new List<int>();
+            List<String> inputTMP;
+            String calcStr = "";
 
             Boolean valid = false;
             int curNum;
@@ -25,15 +23,18 @@ namespace testProject
             inputTMP = GetUserInputNumericalCalc();
             operators = GetOpArray(inputTMP, ref valid);
             numbers = GetNumArray(inputTMP, ref valid);
+            calcStr = usrInputToStr(inputTMP);
             }
 
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < numbers.Count; i++)
             {
                 curNum = numbers[i];
                 curOp = operators[i];
                 result = PerformOneNumericalCalculation(curOp, result, curNum);
             }
             Console.WriteLine("The result of this calculation is: {0:N}", result);
+            Program.logger.WriteText(calcStr);
+            Program.logger.WriteText(result.ToString());
         }
 
         private int PerformOneNumericalCalculation(Char op, int result, int number)
@@ -56,48 +57,59 @@ namespace testProject
             return result;
         }
 
-        private string[] GetUserInputNumericalCalc()
+        private List<String> GetUserInputNumericalCalc()
         {
             Console.WriteLine(" When entering a calculation, be sure to seperate each number/ operator using a space.");
             Console.WriteLine("   e.g 12 * 3 + 4");
             Console.WriteLine();
             Console.Write("   Enter calculation: ");
             string[] userInput = Console.ReadLine().Split(' ');
-            return userInput;
+            List<String> userInputList = new List<String>();
+            foreach (String number in userInput)
+            {
+                userInputList.Add(number);
+            }
+            return userInputList;
         }
 
-        private int[] GetNumArray(string[] input, ref Boolean valid)
+        private List<int> GetNumArray(List<String> input, ref Boolean valid)
         {
-            int[] output = new int[(input.Length / 2) + 1];
-            int curOutPutIndex = 0;
-            for (int i = 0; i < input.Length; i += 2)
+            List<int> output = new List<int>();
+            for (int i = 0; i < input.Count; i += 2)
             {
                 if (!(valid = Program.IsValid(input[i], 1)))
                 {
-                    return new int[0];
+                    return new List<int>();
                 }
-                output[curOutPutIndex] = Convert.ToInt32(input[i]);
-                curOutPutIndex++;
+                output.Add(Convert.ToInt32(input[i]));
             }
             return output;
         }
 
-        private Char[] GetOpArray(string[] input, ref Boolean valid)
+        private List<Char> GetOpArray(List<String> input, ref Boolean valid)
         {
-            char[] output = new char[(input.Length / 2) + 1];
+            List<Char> output = new List<Char>();
             //The first number should always be added to the result first
-            output[0] = '+';
-            int curOutPutIndex = 1;
-            for (int i = 1; i < input.Length - 1; i += 2)
+            output.Add('+');
+            for (int i = 1; i < input.Count - 1; i += 2)
             {
                 if (!(valid = Program.IsValid(input[i], 0)))
                 {
-                    return new char[0];
+                    return new List<Char>();
                 }
-                output[curOutPutIndex] = input[i].ToCharArray()[0];
-                curOutPutIndex++;
+                output.Add(input[i].ToCharArray()[0]);
             }
             return output;
+        }
+
+        private String usrInputToStr(List<String> inputArray)
+        {
+            String inputString = "";
+            foreach(String element in inputArray)
+            {
+                inputString += element;
+            }
+            return inputString;
         }
     }
 }

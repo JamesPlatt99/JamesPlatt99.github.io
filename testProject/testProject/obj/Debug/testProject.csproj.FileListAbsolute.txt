@@ -1,0 +1,6 @@
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\bin\Debug\testProject.exe.config
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\bin\Debug\testProject.exe
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\bin\Debug\testProject.pdb
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\obj\Debug\testProject.csproj.CoreCompileInputs.cache
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\obj\Debug\testProject.exe
+C:\local projects\Aptem Projects\test\Test\testProject\testProject\obj\Debug\testProject.pdb

@@ -1,37 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace testProject
 {
     class Program
     {
         private const int numberCalculator = 1;
         private const int dateCalculator = 2;
+        public static LogToFile logger = new LogToFile();
 
         static void Main(string[] args)
+
         {          
             Boolean valid;
             int calcMode = 0;
 
 
             PrintWelcomeMessage();
+            logger.ClearLog();
 
             while (true) {
                 valid = false;
                 while (!valid)
                 {
-                    if ((calcMode = getCalcMode(ref valid)) == 1)
-                    {
-                        NumericalCalc numericalCalc = new NumericalCalc();
-                        numericalCalc.StartNumCalc();
-                    }
-                    else
-                    {
-                        DateTimeCalc dateTimeCalc = new DateTimeCalc();
-                        dateTimeCalc.StartDateCalc();
+                    switch(calcMode = getCalcMode(ref valid)){
+                        case 1:
+                            NumericalCalc numericalCalc = new NumericalCalc();
+                            numericalCalc.StartNumCalc();
+                            break;
+                        case 2:
+                            DateTimeCalc dateTimeCalc = new DateTimeCalc();
+                            dateTimeCalc.StartDateCalc();
+                            break;
+                        case 3:
+                            SingleOpNumericalCalc singleOpNumericalCalc = new SingleOpNumericalCalc();
+                            singleOpNumericalCalc.StartSingleOpNumericalCalc();
+                            break;
                     }
 
                 }
@@ -47,6 +49,7 @@ namespace testProject
             Console.WriteLine("Which calculator mode do you want?");
             Console.WriteLine("  1) Numbers");
             Console.WriteLine("  2) Date");
+            Console.WriteLine("  3) Single operation (numerical)");
             String input = Console.ReadLine();
             int output = 0;
             if (valid = IsValid(input, 1))
