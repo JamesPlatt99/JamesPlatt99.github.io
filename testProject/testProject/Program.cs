@@ -3,48 +3,40 @@ namespace testProject
 {
     class Program
     {
-        private const int numberCalculator = 1;
-        private const int dateCalculator = 2;
         public static LogToFile logger = new LogToFile();
 
         static void Main(string[] args)
 
         {          
-            Boolean valid;
-            int calcMode = 0;
-
+            Boolean valid = false;
+            CalcType calcType = 0;
 
             PrintWelcomeMessage();
             logger.ClearLog();
-
-            while (true) {
-                valid = false;
                 while (!valid)
                 {
-                    switch(calcMode = getCalcMode(ref valid)){
-                        case 1:
+                    switch(calcType = getCalcMode(ref valid)){
+                        case CalcType.Numerical:
                             NumericalCalc numericalCalc = new NumericalCalc();
                             numericalCalc.StartNumCalc();
                             break;
-                        case 2:
+                        case CalcType.Date:
                             DateTimeCalc dateTimeCalc = new DateTimeCalc();
                             dateTimeCalc.StartDateCalc();
                             break;
-                        case 3:
+                        case CalcType.SingleOpNumerical:
                             SingleOpNumericalCalc singleOpNumericalCalc = new SingleOpNumericalCalc();
                             singleOpNumericalCalc.StartSingleOpNumericalCalc();
                             break;
                     }
-
+                    Console.WriteLine("..");
+                    Console.ReadLine();
+                    Console.WriteLine();
+                valid = false;
                 }
-                Console.WriteLine("..");
-                Console.ReadLine();
-                Console.WriteLine();
+            }        
 
-            }
-        }
-
-        private static int getCalcMode(ref Boolean valid)
+        private static CalcType getCalcMode(ref Boolean valid)
         {
             Console.WriteLine("Which calculator mode do you want?");
             Console.WriteLine("  1) Numbers");
@@ -56,7 +48,7 @@ namespace testProject
             {
                 output = Convert.ToInt32(input);
             }
-            return output;
+                return (CalcType)output;
         }
 
         public static Boolean IsValid(string input, int type)
@@ -104,6 +96,12 @@ namespace testProject
 
         }
 
-        
+        private enum CalcType
+        {
+            Numerical = 1,
+            Date = 2,
+            SingleOpNumerical = 3
+            
+        };
     }
 }

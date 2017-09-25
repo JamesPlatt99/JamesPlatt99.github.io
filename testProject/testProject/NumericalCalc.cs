@@ -28,9 +28,17 @@ namespace testProject
 
             for (int i = 0; i < numbers.Count; i++)
             {
+                try { 
                 curNum = numbers[i];
                 curOp = operators[i];
                 result = PerformOneNumericalCalculation(curOp, result, curNum);
+                }
+                catch
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Please ensure you start and end your input on a number.");
+                    Console.WriteLine();
+                }
             }
             Console.WriteLine("The result of this calculation is: {0:N}", result);
             Program.logger.WriteText(calcStr);
@@ -93,8 +101,13 @@ namespace testProject
             output.Add('+');
             for (int i = 1; i < input.Count - 1; i += 2)
             {
+                try { 
                 if (!(valid = Program.IsValid(input[i], 0)))
                 {
+                    throw new UnsupportedOperatorException(input[i].ToCharArray()[0]);                    
+                }
+                }catch (UnsupportedOperatorException ex) {
+                    Console.WriteLine("Error: " + ex);
                     return new List<Char>();
                 }
                 output.Add(input[i].ToCharArray()[0]);

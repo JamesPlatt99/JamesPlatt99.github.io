@@ -60,8 +60,18 @@ namespace testProject
             String input = "";
             while(!valid)
             {
-                input = Console.ReadLine();
-                valid = Program.IsValid(input, 0);
+                try { 
+                    input = Console.ReadLine();
+                    valid = Program.IsValid(input, 0);
+                    if (!valid)
+                    {
+                        throw new UnsupportedOperatorException(input.ToCharArray()[0]);
+                    }
+                }
+                catch(UnsupportedOperatorException ex)
+                {
+                    Console.WriteLine("Error, {0}" , ex.Message );
+                }
             }
             return input.ToCharArray()[0];
         }
