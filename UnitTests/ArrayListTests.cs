@@ -7,7 +7,7 @@ namespace UnitTests
     public class ArrayListTests
     {
         [TestMethod]
-        public void KataTests()
+        public void ArrayListKataTests()
         {
             var list = new SimpleLists.Lists.ArrayList();
             Assert.IsNull(list.Find("fred"));

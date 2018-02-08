@@ -10,7 +10,7 @@ namespace UnitTests
     public class DoublyLinkedTests
     {
         [TestMethod]
-        public void KataTests()
+        public void DoublyLinkedKataTests()
         {
             var list = new SimpleLists.Lists.DoublyLinkedList();
             Assert.IsNull(list.Find("fred"));
@@ -32,14 +32,35 @@ namespace UnitTests
             CollectionAssert.AreEqual(new string[] { "fred", "wilma", "betty", "barney" }, list.Values());
             CollectionAssert.AreEqual(new Node[] { new Node("betty"), new Node("barney") }, list.GetNextNodes("wilma"));
             CollectionAssert.AreEqual(new Node[] { new Node("wilma") , new Node("fred") }, list.GetPreviousNodes("betty"));
-            list.Remove(list.Find("wilma").Value);
+            list.Remove(list.Find("wilma"));
             CollectionAssert.AreEqual(new string[] { "fred", "betty", "barney" }, list.Values());
             list.Remove(list.Find("barney").Value);
             CollectionAssert.AreEqual(new string[] { "fred", "betty" }, list.Values());
-            list.Remove(list.Find("fred"));
+            list.Remove(list.Find("fred").Value);
             CollectionAssert.AreEqual(new string[] { "betty" }, list.Values());
-            list.Remove(list.Find("betty"));
+            list.Remove(list.Find("betty").Value);
             CollectionAssert.AreEqual(new string[] { }, list.Values());
+        }
+
+        [TestMethod]
+        public void DoublyLinkedTestDuplicates()
+        {
+            var list = new SimpleLists.Lists.DoublyLinkedList();
+            list.Add("pete");
+            list.Add("pete");
+            CollectionAssert.AreEqual(list.Values(), (new string[] { "pete", "pete" }));
+            list.Remove("pete");
+            CollectionAssert.AreEqual(list.Values(), (new string[] { "pete" }));
+
+
+            list = new SimpleLists.Lists.DoublyLinkedList();
+            list.Add("pete");
+            list.Add("glen");
+            list.Add("pete");
+            Node pete = new Node("pete");
+            CollectionAssert.AreEqual(list.Values(), (new string[] { "pete", "glen", "pete" }));
+            list.Remove("pete");
+            CollectionAssert.AreEqual(list.Values(), (new string[] { "glen" ,"pete" }));
         }
     }
 }

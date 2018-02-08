@@ -7,7 +7,7 @@ namespace UnitTests
     public class SinglyLinkedListTests
     {
         [TestMethod]
-        public void KataTests()
+        public void SinglyLinkedKataTests()
         {
             var list = new SimpleLists.Lists.SinglyLinkedList();
             Assert.IsNull(list.Find("fred"));
