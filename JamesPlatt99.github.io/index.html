@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>lovely lil website</title>
+
+        <link rel="stylesheet" type="text/css" href="Resources/Style/Main.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Header.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Menu.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Content.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="jquery.js"></script> 
+        <script src="Resources/JS/Main.js"></script>
+        <script src="Resources/JS/Menu.js"></script>
+        
+    </head>
+    <body>
+        <div id="Header">Error loading page (Header)</div>
+        <div id="Menu">Error loading page (Menu)</div>
+
+        <div id="Content">
+            <p id="error"></p>
+            <script> 
+                document.getElementById("error").innerHTML = "Could not load content for page (" + curPage + ").";
+            </script>
+            <!-- <div id="Home">Error loading page (Home)</div>
+            <div id="About">Error loading page (About)</div>
+            <div id="GreatWebsites">Error loading page (Gr8 websites)</div>             -->
+        </div>
+
+    </body>
+    <footer>
+        <div id="Footer">
+        </div>
+    </footer>
+</html>
