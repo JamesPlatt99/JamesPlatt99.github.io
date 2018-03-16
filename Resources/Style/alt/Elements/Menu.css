@@ -25,5 +25,5 @@
 }
 #Menu li a:hover {
 	border-radius:6px;    
-    background-color: #339933;
+    background-color: rgba(0,0,0,0.1);
 }
