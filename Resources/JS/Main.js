@@ -1,7 +1,9 @@
 $(document).ready(function(){      
     $("#Header").load("Resources/Elements/Header.html"); 
     $("#Menu").load("Resources/Elements/Menu.html"); 
-
+    $("#Home").load("Pages/Home.html"); 
+    $("#About").load("Pages/About.html"); 
+    $("#GreatWebsites").load("Pages/GreatWebsites.html"); 
     var page = getUrlParameter('page')
     if(page === null){
         page = "Home";

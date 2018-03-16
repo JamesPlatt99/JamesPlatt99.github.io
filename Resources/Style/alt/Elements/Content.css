@@ -1,0 +1,25 @@
+#Content{
+    color: #323232;
+	background-color: #ffffff;
+    margin-top: 325px;
+	margin-right: 40px;
+	margin-left: 350px;
+    min-height: 300px;
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s; /* Firefox < 16 */
+     -ms-animation: fadein 5s; /* Internet Explorer */
+      -o-animation: fadein 5s; /* Opera < 12.1 */
+         animation: fadein 5s;
+}
+#Title{
+    background-color: #131313;
+    color: #f3f3f3;
+    font-size: 24pt;
+}
+p{
+    margin-left: 15px;
+}
+iframe{
+    border: none;
+    width: 100%;
+}

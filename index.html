@@ -2,10 +2,10 @@
     <head>
         <title>lovely lil website</title>
 
-        <link rel="stylesheet" type="text/css" href="Resources/Style/Main.css">
-        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Header.css">
-        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Menu.css">
-        <link rel="stylesheet" type="text/css" href="Resources/Style/Elements/Content.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/alt/Main.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/alt/Elements/Header.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/alt/Elements/Menu.css">
+        <link rel="stylesheet" type="text/css" href="Resources/Style/alt/Elements/Content.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="jquery.js"></script> 
@@ -14,12 +14,23 @@
         
     </head>
     <body>
-        <div id="Header">Error loading page (Header)</div>
-        <div id="Menu">Error loading page (Menu)</div>
+        <div id="Header">
+            <iframe src="Resources/Elements/Header.html"></iframe>            
+        </div>
+        <div id="Menu">
+            <iframe src="Resources/Elements/Menu.html"></iframe> 
+        </div>
 
         <div id="Content">
-            <p id="error"></p>
-            <script>document.getElementById("error").innerHTML = "[404] Could not load content for page (" + curPage + ").";</script>            
+            <div id="Home">
+                <iframe src="Pages/Home.html"></iframe>
+            </div>
+            <div id="About">
+                <iframe src="Pages/About.html"></iframe>                
+            </div>
+            <div id="GreatWebsites">
+                <iframe src="Pages/GreatWebsites.html"></iframe>                                
+            </div>             
         </div>
     </body>
     <footer>

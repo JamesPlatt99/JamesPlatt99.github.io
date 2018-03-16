@@ -25,3 +25,9 @@
     font-size: 8pt;
     font-style: italic;
 }
+#Image{
+    float: left;
+}
+#Image img{
+    height: 100%;    
+}

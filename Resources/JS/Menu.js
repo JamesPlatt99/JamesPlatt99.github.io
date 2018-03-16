@@ -1,7 +1,10 @@
-var curPage;
 function loadPage(pageToLoad) {
-    if(pageToLoad != curPage){
-        $("#Content").load("Pages/" + pageToLoad + ".html");   
-    }
-    curPage = pageToLoad;
-}
+   $("#Home").hide();
+   $("#About").hide();
+   $("#GreatWebsites").hide();
+   
+   $("#" + pageToLoad).show();    
+   //False return prevents page refresh
+    history.pushState({}, null, "?page=" + pageToLoad);
+    return false;
+} 
