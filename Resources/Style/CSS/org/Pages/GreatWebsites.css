@@ -6,6 +6,7 @@
   height: 450px; }
 
 #ContentGreatWebsite a {
-  color: #ff00ff; }
+  color: #ff00ff;
+  text-shadow: horizontal-shadow vertical-shadow blur color; }
 
 /*# sourceMappingURL=GreatWebsites.css.map */

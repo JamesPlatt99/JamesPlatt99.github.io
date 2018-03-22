@@ -45,10 +45,10 @@ html, body {
         -ms-animation: $fadeIn; /* Internet Explorer */
          -o-animation: $fadeIn; /* Opera < 12.1 */
             animation: $fadeIn;
-}
-#Image img{
-    margin-top:0px;
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
+    img{
+        margin-top:0px;
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+    }
 }

@@ -16,30 +16,32 @@ $offWhite: #f3f3f3;
     padding-left: 6px;
     display: inline-block;
     position: fixed;
-}
-#Menu li a{
-	display: block;
-    float:left;
-	text-align: center;
-	line-height: 20px;
-    min-width: 150px;
-    padding: 5px;
-    border-right: $borderRadius;
-    margin-left:-5px;
-    color: $offWhite;
-	text-decoration: none;
-}
-#Menu ul {
-	display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-#Menu li a:hover {
-    background-color: #353535;
-    color: $offWhite;
-}
-#Menu li:first-child a{
-	border-bottom-left-radius:$borderRadius;
-	border-top-left-radius:$borderRadius;
+    ul {
+        display: inline;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        &:first-child a{
+            border-bottom-left-radius:$borderRadius;
+            border-top-left-radius:$borderRadius;
+        }
+        a{
+            display: block;
+            float:left;
+            text-align: center;
+            line-height: 20px;
+            min-width: 150px;
+            padding: 5px;
+            border-right: $borderRadius;
+            margin-left:-5px;
+            color: $offWhite;
+            text-decoration: none;
+            &:hover {
+                background-color: #353535;
+                color: $offWhite;
+            }            
+        }
+    } 
 }

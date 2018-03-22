@@ -50,11 +50,10 @@ html, body {
   -o-animation: fadein 5s;
   /* Opera < 12.1 */
   animation: fadein 5s; }
-
-#Image img {
-  margin-top: 0px;
-  height: 150px;
-  width: 150px;
-  border-radius: 100%; }
+  #Image img {
+    margin-top: 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%; }
 
 /*# sourceMappingURL=Header.css.map */
