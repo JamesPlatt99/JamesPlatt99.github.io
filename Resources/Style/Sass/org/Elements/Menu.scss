@@ -1,14 +1,18 @@
+$shadow: 3px 6px 20px -2px #121212;
+$borderRadius: 3px;
+$offWhite: #f3f3f3;
+
 #menu{
     width:94%;
     height: 30px;
     top: 120px;
     right :0px;
 	background: #656565;
-	border-bottom-left-radius:3px;
-	border-top-left-radius:3px;
-	-webkit-box-shadow: 3px 6px 20px -2px #121212;
-	-moz-box-shadow: 3px 6px 20px -2px #121212;
-    box-shadow: 3px 6px 20px -2px #121212;
+	border-bottom-left-radius:$borderRadius;
+	border-top-left-radius:$borderRadius;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+    box-shadow: $shadow;
     padding-left: 6px;
     display: inline-block;
     position: fixed;
@@ -20,9 +24,9 @@
 	line-height: 20px;
     min-width: 150px;
     padding: 5px;
-    border-right: 3px;
+    border-right: $borderRadius;
     margin-left:-5px;
-    color: #f3f3f3;
+    color: $offWhite;
 	text-decoration: none;
 }
 #Menu ul {
@@ -33,9 +37,9 @@
 }
 #Menu li a:hover {
     background-color: #353535;
-    color: #f3f3f3;
+    color: $offWhite;
 }
 #Menu li:first-child a{
-	border-bottom-left-radius:3px;
-	border-top-left-radius:3px;
+	border-bottom-left-radius:$borderRadius;
+	border-top-left-radius:$borderRadius;
 }

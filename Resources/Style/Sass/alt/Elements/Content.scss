@@ -1,3 +1,5 @@
+$fadeIn: fadein 5s;
+
 #Content{
     color: #323232;
 	background-color: #ffffff;
@@ -5,11 +7,11 @@
 	margin-right: 40px;
 	margin-left: 300px;
     min-height: 450px;
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 5s; /* Firefox < 16 */
-     -ms-animation: fadein 5s; /* Internet Explorer */
-      -o-animation: fadein 5s; /* Opera < 12.1 */
-         animation: fadein 5s;
+    -webkit-animation: $fadeIn; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: $fadeIn; /* Firefox < 16 */
+     -ms-animation: $fadeIn; /* Internet Explorer */
+      -o-animation: $fadeIn; /* Opera < 12.1 */
+         animation: $fadeIn;
 }
 #Title{
     background-color: #131313;

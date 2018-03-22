@@ -1,11 +1,14 @@
+$shadow: 3px 6px 20px -2px #121212;
+$borderRadius: 5px;
+
 #Content{
     color: #323232;
 	background-color: #ffffff;
-	-webkit-box-shadow: 3px 6px 20px -2px #121212;
-	-moz-box-shadow: 3px 6px 20px -2px #121212;
-    box-shadow: 3px 6px 20px -2px #121212;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
     margin-top: 175px;
 	margin-right: -8px;
     width: 97%;
