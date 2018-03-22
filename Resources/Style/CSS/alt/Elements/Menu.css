@@ -1,0 +1,30 @@
+#menu {
+  width: 40%;
+  float: center;
+  bottom: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 13px;
+  right: 40px; }
+
+#Menu li a {
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 20px;
+  min-width: 120px;
+  padding: 8px;
+  border-right: 3px;
+  color: #f3f3f3;
+  text-decoration: none; }
+
+#Menu ul {
+  list-style-type: none;
+  margin: 50px;
+  padding: 0; }
+
+#Menu li a:hover {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+/*# sourceMappingURL=Menu.css.map */

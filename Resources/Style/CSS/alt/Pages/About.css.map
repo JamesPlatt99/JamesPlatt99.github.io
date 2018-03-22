@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;EACP,SAAS,EAAC,MAAM;EAChB,UAAU,EAAE,OAAO;;AAEvB,KAAK;EACD,WAAW,EAAC,IAAI",
+"sources": ["../../../Sass/alt/Pages/About.scss"],
+"names": [],
+"file": "About.css"
+}

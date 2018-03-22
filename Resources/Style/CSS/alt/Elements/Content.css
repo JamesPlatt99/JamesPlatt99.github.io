@@ -1,0 +1,33 @@
+#Content {
+  color: #323232;
+  background-color: #ffffff;
+  margin-top: 275px;
+  margin-right: 40px;
+  margin-left: 300px;
+  min-height: 450px;
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s; }
+
+#Title {
+  background-color: #131313;
+  color: #f3f3f3;
+  font-size: 24pt; }
+
+#body {
+  margin-top: -20px; }
+
+p {
+  margin-left: 15px; }
+
+iframe {
+  border: none;
+  width: 100%; }
+
+/*# sourceMappingURL=Content.css.map */

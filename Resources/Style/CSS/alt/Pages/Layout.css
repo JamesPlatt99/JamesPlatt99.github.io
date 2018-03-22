@@ -1,0 +1,10 @@
+#Left {
+  float: left;
+  overflow: hidden; }
+
+#Right {
+  margin-left: 275px;
+  width: 600px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=Layout.css.map */
