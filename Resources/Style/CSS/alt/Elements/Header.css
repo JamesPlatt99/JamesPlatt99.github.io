@@ -47,15 +47,15 @@ html, body {
   letter-spacing: 2;
   color: #f3f3f3;
   float: left;
-  -webkit-animation: fadein 2s;
+  -webkit-animation: fadein 5s;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s;
+  -moz-animation: fadein 5s;
   /* Firefox < 16 */
-  -ms-animation: fadein 2s;
+  -ms-animation: fadein 5s;
   /* Internet Explorer */
-  -o-animation: fadein 2s;
+  -o-animation: fadein 5s;
   /* Opera < 12.1 */
-  animation: fadein 2s;
+  animation: fadein 5s;
   position: absolute;
   bottom: 13px; }
 
@@ -69,15 +69,15 @@ html, body {
 #Image {
   margin: 25px;
   margin-left: 50px;
-  -webkit-animation: fadein 2s;
+  -webkit-animation: fadein 5s;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s;
+  -moz-animation: fadein 5s;
   /* Firefox < 16 */
-  -ms-animation: fadein 2s;
+  -ms-animation: fadein 5s;
   /* Internet Explorer */
-  -o-animation: fadein 2s;
+  -o-animation: fadein 5s;
   /* Opera < 12.1 */
-  animation: fadein 2s; }
+  animation: fadein 5s; }
   #Image img {
     margin-top: 0px;
     height: 150px;
