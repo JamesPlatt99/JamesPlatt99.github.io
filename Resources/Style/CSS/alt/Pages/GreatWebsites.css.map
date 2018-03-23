@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,oBAAoB;EAChB,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,oCAAoC;EACjD,gBAAgB,EAAE,OAAO;EACzB,gBAAgB,EAAE,4DAA4D;EAC9E,MAAM,EAAE,KAAK;;AAEjB,sBAAsB;EAClB,KAAK,EAAE,OAAO",
-"sources": ["../../../Sass/alt/Pages/GreatWebsites.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "GreatWebsites.css"
 }

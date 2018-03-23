@@ -1,25 +1,40 @@
-$fadeIn: fadein 5s;
+@import 'fadeIn';
 
-#Content{
-    color: #323232;
-	background-color: #ffffff;
+.Content{
+    @include fadeIn;
     margin-top: 275px;
 	margin-right: 40px;
 	margin-left: 300px;
     min-height: 450px;
-    -webkit-animation: $fadeIn; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: $fadeIn; /* Firefox < 16 */
-     -ms-animation: $fadeIn; /* Internet Explorer */
-      -o-animation: $fadeIn; /* Opera < 12.1 */
-         animation: $fadeIn;
+    background: rgb(255,255,255); /* for IE */
+    background: rgba(255,255,255,0.55);
+    #Title{
+        background-color: #131313;
+        color: #f3f3f3;
+        font-size: 24pt;
+    }
+    #body{
+        margin-top: -20px;
+    }
 }
-#Title{
-    background-color: #131313;
-    color: #f3f3f3;
-    font-size: 24pt;
-}
-#body{
-    margin-top: -20px;
+.ContentGreatWebsite{
+    margin:0px;     
+    min-height: 450px;
+    color: #ff0000;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #550000;
+    background-image: url("../../Images/Pages/GreatWebsites/background.gif");
+    a{
+        color: #ff00ff;
+    }
+    #Title{
+        background-color: #ff0000;
+        color: #550000;
+        font-size: 24pt;
+    }
+    #body{
+        margin-top: -20px;
+    }
 }
 p{
     margin-left: 15px;

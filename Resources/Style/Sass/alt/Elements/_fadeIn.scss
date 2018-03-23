@@ -1,0 +1,40 @@
+$fadeIn: fadein 5s;
+@mixin fadeIn{
+    -webkit-animation: $fadeIn; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: $fadeIn; /* Firefox < 16 */
+    -ms-animation: $fadeIn; /* Internet Explorer */
+    -o-animation: $fadeIn; /* Opera < 12.1 */
+    animation: $fadeIn;
+}
+
+
+$fadeInFrom: 0;
+$fadeInTo: 1;
+@keyframes fadein {
+    from { opacity: $fadeInFrom; }
+    to   { opacity: $fadeInTo; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: $fadeInFrom; }
+    to   { opacity: $fadeInTo; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: $fadeInFrom; }
+    to   { opacity: $fadeInTo; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: $fadeInFrom; }
+    to   { opacity: $fadeInTo; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {    
+    from { opacity: $fadeInFrom; }
+    to   { opacity: $fadeInTo; }
+}

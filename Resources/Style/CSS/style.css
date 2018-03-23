@@ -1,0 +1,212 @@
+body {
+  background-color: #362e2e;
+  background-image: url("https://i2.wp.com/www.algiz-technology.com/wp-content/uploads/2016/05/triangle-background.png?ssl=1");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.Content {
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s;
+  margin-top: 275px;
+  margin-right: 40px;
+  margin-left: 300px;
+  min-height: 450px;
+  background: white;
+  /* for IE */
+  background: rgba(255, 255, 255, 0.55); }
+  .Content #Title {
+    background-color: #131313;
+    color: #f3f3f3;
+    font-size: 24pt; }
+  .Content #body {
+    margin-top: -20px; }
+
+.ContentGreatWebsite {
+  margin: 0px;
+  min-height: 450px;
+  color: #ff0000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #550000;
+  background-image: url("../../Images/Pages/GreatWebsites/background.gif"); }
+  .ContentGreatWebsite a {
+    color: #ff00ff; }
+  .ContentGreatWebsite #Title {
+    background-color: #ff0000;
+    color: #550000;
+    font-size: 24pt; }
+  .ContentGreatWebsite #body {
+    margin-top: -20px; }
+
+p {
+  margin-left: 15px; }
+
+iframe {
+  border: none;
+  width: 100%; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+html, body {
+  padding: 0px; }
+
+#Header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+  align-content: center; }
+
+#HeaderText {
+  font-size: 16pt;
+  margin-top: 13px;
+  margin-left: 17px;
+  letter-spacing: 2;
+  color: #f3f3f3;
+  float: left;
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s;
+  position: absolute;
+  bottom: 13px; }
+
+#HeaderDesc {
+  letter-spacing: 2;
+  color: #f3f3f3;
+  float: left;
+  font-size: 8pt;
+  font-style: italic; }
+
+#Image {
+  margin: 25px;
+  margin-left: 50px;
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s; }
+  #Image img {
+    margin-top: 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%; }
+
+#menu {
+  width: 40%;
+  float: center;
+  bottom: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 13px;
+  right: 40px; }
+  #menu li a {
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    min-width: 120px;
+    padding: 8px;
+    border-right: 3px;
+    color: #f3f3f3;
+    text-decoration: none; }
+    #menu li a:hover {
+      border-radius: 6px;
+      background-color: rgba(0, 0, 0, 0.1); }
+  #menu ul {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0; }
+
+#SubHeading {
+  font-size: 13.5pt;
+  font-style: oblique; }
+
+#Text {
+  margin-left: 15px; }
+
+#Left {
+  float: left;
+  overflow: hidden; }
+
+#Right {
+  margin-left: 275px;
+  width: 600px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=style.css.map */
