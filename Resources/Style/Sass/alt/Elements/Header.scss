@@ -43,13 +43,35 @@ html, body {
         width: 150px;
         border-radius: 100%;
         -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;
-        box-shadow:
-            0 0 50px 20px #1266aa;
-        &:hover {
+            transition: transform .8s ease-in-out;
+        box-shadow:0 0 50px 20px #1266aa;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;  
+        &:active {
             animation: spin 100s forwards;    
-        }
+        }      
+        &:hover ~ .tooltiptext { 
+            opacity: 1;
+        }    
+        &:active ~ .tooltiptext { 
+            opacity: 0;
+        } 
     }
+    .tooltiptext {
+        width: 120px;
+        background-color: rgba($color: #000000, $alpha: 0.25);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        opacity: 0;
+        transition: opacity 1.5s;    
+        position: absolute;
+        z-index: 1;
+    }       
 }
 
 @keyframes spin {

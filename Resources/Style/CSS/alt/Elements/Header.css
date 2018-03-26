@@ -85,9 +85,29 @@ html, body {
     border-radius: 100%;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;
-    box-shadow: 0 0 50px 20px #1266aa; }
-    #Image img:hover {
+    box-shadow: 0 0 50px 20px #1266aa;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    #Image img:active {
       animation: spin 100s forwards; }
+    #Image img:hover ~ .tooltiptext {
+      opacity: 1; }
+    #Image img:active ~ .tooltiptext {
+      opacity: 0; }
+  #Image .tooltiptext {
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0;
+    transition: opacity 1.5s;
+    position: absolute;
+    z-index: 1; }
 
 @keyframes spin {
   from {
