@@ -23,15 +23,3 @@ function getUrlParameter(param) {
     }
     return null;
 };
-
-function switchCSS(){
-    var inputs = document.getElementsByTagName('link');
-    for(var i = 0; i < inputs.length; i++) {
-        swapStyleSheet(inputs(i));
-    }
-}
-function swapStyleSheet(sheet){
-    if(sheet.Attribute("href").split('/')(3) === "alt"){
-        sheet.setAttribute("href") = "Resources/Style/" + "Test";
-    }
-}

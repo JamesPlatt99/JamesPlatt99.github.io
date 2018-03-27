@@ -5,6 +5,6 @@ function loadPage(pageToLoad) {
    
    $("#" + pageToLoad).show();    
    //False return prevents page refresh
-    history.pushState({}, null, "?page=" + pageToLoad);
-    return false;
+   history.pushState({}, null, "?page=" + pageToLoad);
+   return false;
 } 
