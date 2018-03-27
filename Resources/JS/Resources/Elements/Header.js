@@ -1,6 +1,9 @@
 $(document).ready(function(){  
     var daysToBDay = document.getElementById('date');
-    daysToBDay.textContent = 'Days to James\' birthday: ' + getTimeToBDay();
+    daysToBDay.textContent = 'Days to James\' birthday: ' + getTimeToBDay();    
+    $("#DateDisplay").hide();   
+    var Image = document.getElementById('Image');
+    Image.addEventListener('click', showBDay);
 });
 
 function getTimeToBDay(){
@@ -12,4 +15,8 @@ function getTimeToBDay(){
         timeSpan += 365;
     }
     return (parseInt(timeSpan));
+}
+
+function showBDay(){
+    $("#DateDisplay").show();    
 }
