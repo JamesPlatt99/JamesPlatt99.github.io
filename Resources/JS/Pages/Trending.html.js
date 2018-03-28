@@ -1,26 +1,66 @@
 const API_KEY = "apiKey=mhiSz2BPtTgsa6PzZk9GUycweyxYWWN5"
 const URL = "https://api.giphy.com/v1"
 const TRENDING_END_POINT = "/gifs/trending?"
-var curIndex = 0;
+const SEARCH_END_POINT = "/gifs/search?"
+var curCount = 1;
 var mainRequest = new XMLHttpRequest();
+var curSearchTerm = URL + TRENDING_END_POINT + API_KEY;
+var searchTermWithOffset;
 
 $(document).ready(function(){  
-    var requestUrl = URL + TRENDING_END_POINT + API_KEY;
-    mainRequest.open('GET', requestUrl);
+    addMore();
+    console.log(Waypoint.viewportHeight());
+})
+
+var waypoint = new Waypoint({
+    element: document.getElementById('MoreButton'),
+    handler: function() {
+      addMore();
+    },
+    offset: (Waypoint.viewportHeight())
+})
+
+function searchGifs(){
+    clearGifs();
+    curCount = 1;
+    var searchTerm = "&q=" + document.getElementById('search').value;
+    curSearchTerm = URL + SEARCH_END_POINT + API_KEY + searchTerm;
+    addMore();
+}
+
+function addMore(){
+    loading = true;
+    searchTermWithOffset = curSearchTerm + "&offset=" + curCount;
+    generateRequest();
+}
+
+function generateRequest(){
+    mainRequest.open('GET', searchTermWithOffset + "&limit=10");
     mainRequest.responseType = 'json';
     mainRequest.send();
 
     mainRequest.onload = function() {
-        populateTrendingGifs();
+        populateGifs();
     }
-})
+}
 
-function populateTrendingGifs(){
+function populateGifs(){
     var response = mainRequest.response;           
     for(var curResponse in response.data){
         var curImage = document.createElement("img");
         var imageUrl  = response.data[curResponse].images.original.url;
         curImage.setAttribute("src", imageUrl);
-        $("#giphyResults").after(curImage);
+        curImage.setAttribute("class", "gif");
+        $("#MoreButton").before(curImage);
+        curCount++;
     };
+    Waypoint.refreshAll()
+}
+
+function clearGifs(){
+    var element = document.getElementsByClassName("gif");
+    var index;
+    for (index = element.length - 1; index >= 0; index--) {
+        element[index].parentNode.removeChild(element[index]);
+    }
 }
