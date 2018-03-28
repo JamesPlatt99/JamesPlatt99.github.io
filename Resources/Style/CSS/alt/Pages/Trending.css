@@ -2,4 +2,7 @@ img {
   width: 25%;
   min-width: 150px; }
 
+#giphyResults {
+  margin-top: -32px; }
+
 /*# sourceMappingURL=Trending.css.map */

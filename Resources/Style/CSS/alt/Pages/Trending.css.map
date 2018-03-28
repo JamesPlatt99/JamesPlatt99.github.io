@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,GAAG;EACC,KAAK,EAAE,GAAG;EACV,SAAS,EAAC,KAAK",
+"mappings": "AAAA,GAAG;EACC,KAAK,EAAE,GAAG;EACV,SAAS,EAAC,KAAK;;AAEnB,aAAa;EACT,UAAU,EAAC,KAAK",
 "sources": ["../../../Sass/alt/Pages/Trending.scss"],
 "names": [],
 "file": "Trending.css"

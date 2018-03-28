@@ -2,7 +2,7 @@ $(document).ready(function(){
     var daysToBDay = document.getElementById('date');
     daysToBDay.textContent = 'Days to James\' birthday: ' + getTimeToBDay();    
     $("#DateDisplay").hide();   
-    var Image = document.getElementById('Image');
+    var Image = document.getElementById('me');
     Image.addEventListener('click', showBDay);
 });
 
