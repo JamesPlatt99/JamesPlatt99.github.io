@@ -3,6 +3,7 @@ $(document).ready(function(){
     $("#Menu").load("Resources/Elements/Menu.html"); 
     $("#Home").load("Pages/Home.html"); 
     $("#About").load("Pages/About.html"); 
+    $("#Trending").load("Pages/Trending.html"); 
     $("#GreatWebsites").load("Pages/GreatWebsites.html"); 
     var page = getUrlParameter('page')
     if(page === null){

@@ -3,7 +3,7 @@
   float: center;
   bottom: 0px;
   padding: 0px;
-  position: absolute;
+  position: fixed;
   bottom: 13px;
   right: 40px; }
   #menu li a {

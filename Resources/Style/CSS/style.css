@@ -1,9 +1,4 @@
 body {
-  background-color: #362e2e;
-  background-image: url("https://i2.wp.com/www.algiz-technology.com/wp-content/uploads/2016/05/triangle-background.png?ssl=1");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
 
 @keyframes fadein {
@@ -122,7 +117,12 @@ html, body {
   height: 100%;
   box-sizing: border-box;
   z-index: -1;
-  align-content: center; }
+  align-content: center;
+  background-color: #362e2e;
+  background-image: url("https://i2.wp.com/www.algiz-technology.com/wp-content/uploads/2016/05/triangle-background.png?ssl=1");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover; }
 
 #HeaderText {
   font-size: 16pt;
@@ -171,7 +171,6 @@ html, body {
     -webkit-transition-delay: 2s;
     transition: transform .8s ease-in-out;
     transition-delay: 2s;
-    box-shadow: 0 0 50px 20px rgba(255, 78, 0, 0.3);
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -179,8 +178,10 @@ html, body {
     user-select: none; }
     #Image img:active {
       animation: spin 100s forwards; }
-    #Image img:hover ~ .tooltiptext {
-      opacity: 1; }
+    #Image img:hover {
+      box-shadow: 0 0 50px 20px rgba(255, 78, 0, 0.3); }
+      #Image img:hover ~ .tooltiptext {
+        opacity: 1; }
     #Image img:active ~ .tooltiptext {
       opacity: 0; }
   #Image .tooltiptext {
@@ -222,7 +223,7 @@ html, body {
   float: center;
   bottom: 0px;
   padding: 0px;
-  position: absolute;
+  position: fixed;
   bottom: 13px;
   right: 40px; }
   #menu li a {
@@ -256,6 +257,10 @@ html, body {
 
 #Text {
   margin-left: 15px; }
+
+img {
+  width: 25%;
+  min-width: 150px; }
 
 #Left {
   float: left;
