@@ -46,12 +46,15 @@ function generateRequest(){
 function populateGifs(){
     var response = mainRequest.response;           
     for(var curResponse in response.data){
-        var curImage = document.createElement("img");
         var imageUrl  = response.data[curResponse].images.original.url;
-        curImage.setAttribute("onclick", "return copyLink('" + imageUrl + "')");
+        var link = document.createElement("a");
+        link.setAttribute("href", imageUrl);
+        link.setAttribute("target", "_blank");
+        var curImage = document.createElement("img");
         curImage.setAttribute("src", imageUrl);
         curImage.setAttribute("class", "gif");
-        $("#More").before(curImage);
+        link.appendChild(curImage);
+        $("#More").before(link);
         curCount++;
     };
     Waypoint.refreshAll()
@@ -63,10 +66,4 @@ function clearGifs(){
     for (index = element.length - 1; index >= 0; index--) {
         element[index].parentNode.removeChild(element[index]);
     }
-}
-
-function copyLink(url) {
-    console.log(url);
-    window.clipboardData.setData("Text", url);
-    return false
 }
