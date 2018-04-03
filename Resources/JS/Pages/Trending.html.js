@@ -9,7 +9,6 @@ var searchTermWithOffset;
 
 $(document).ready(function(){  
     addMore();
-    console.log(Waypoint.viewportHeight());
 })
 
 var waypoint = new Waypoint({
