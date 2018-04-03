@@ -28,15 +28,15 @@
   to {
     opacity: 1; } }
 .Content {
-  -webkit-animation: fadein 5s;
+  -webkit-animation: fadein 2.5s;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s;
+  -moz-animation: fadein 2.5s;
   /* Firefox < 16 */
-  -ms-animation: fadein 5s;
+  -ms-animation: fadein 2.5s;
   /* Internet Explorer */
-  -o-animation: fadein 5s;
+  -o-animation: fadein 2.5s;
   /* Opera < 12.1 */
-  animation: fadein 5s;
+  animation: fadein 2.5s;
   margin-top: 275px;
   margin-right: 40px;
   margin-left: 300px;

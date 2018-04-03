@@ -49,3 +49,23 @@ $shadowColour: #000000;
         box-shadow:         inset 0 0 10px $shadowColour;
     }
 }
+#CopyArea{
+    @include fadeIn;        
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.95);
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 5px;
+    bottom: 10%;
+    left:45%;
+    color: #ffffff;
+    line-height: 3%;
+    p{
+        margin-left: 30px;
+        margin-right: 5px;
+    }
+    img{
+        position: fixed;
+        height:3%;
+    }
+}

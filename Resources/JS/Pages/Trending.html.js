@@ -8,6 +8,7 @@ var curSearchTerm = URL + TRENDING_END_POINT + API_KEY;
 var searchTermWithOffset;
 
 $(document).ready(function(){  
+    $("#CopyArea").hide();    
     addMore();
 })
 
@@ -47,14 +48,11 @@ function populateGifs(){
     var response = mainRequest.response;           
     for(var curResponse in response.data){
         var imageUrl  = response.data[curResponse].images.original.url;
-        var link = document.createElement("a");
-        link.setAttribute("href", imageUrl);
-        link.setAttribute("target", "_blank");
         var curImage = document.createElement("img");
         curImage.setAttribute("src", imageUrl);
+        curImage.setAttribute("onclick", "copyText('" + imageUrl + "')");
         curImage.setAttribute("class", "gif");
-        link.appendChild(curImage);
-        $("#More").before(link);
+        $("#More").before(curImage);
         curCount++;
     };
     Waypoint.refreshAll()
@@ -66,4 +64,22 @@ function clearGifs(){
     for (index = element.length - 1; index >= 0; index--) {
         element[index].parentNode.removeChild(element[index]);
     }
+    Waypoint.refreshAll();
+}
+
+function copyText(url){
+    $("#CopyArea").show();        
+    $("#copyText").show(); 
+    var copyText = document.getElementById("copyText");
+    copyText.visibility = "visible";
+    copyText.value = url;
+    copyText.select();
+    document.execCommand("Copy");
+    $("#copyText").hide();     
+    setTimeout(function(){closeCopyArea()}, 2500);
+}
+
+function closeCopyArea(){
+    $("#CopyArea").fadeOut(2500);
+    return false;
 }
