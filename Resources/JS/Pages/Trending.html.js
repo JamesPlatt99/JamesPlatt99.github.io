@@ -13,7 +13,7 @@ $(document).ready(function(){
 })
 
 var waypoint = new Waypoint({
-    element: document.getElementById('MoreButton'),
+    element: document.getElementById('More'),
     handler: function() {
       addMore();
     },
@@ -49,9 +49,10 @@ function populateGifs(){
     for(var curResponse in response.data){
         var curImage = document.createElement("img");
         var imageUrl  = response.data[curResponse].images.original.url;
+        curImage.setAttribute("onclick", "return copyLink('" + imageUrl + "')");
         curImage.setAttribute("src", imageUrl);
         curImage.setAttribute("class", "gif");
-        $("#MoreButton").before(curImage);
+        $("#More").before(curImage);
         curCount++;
     };
     Waypoint.refreshAll()
@@ -63,4 +64,10 @@ function clearGifs(){
     for (index = element.length - 1; index >= 0; index--) {
         element[index].parentNode.removeChild(element[index]);
     }
+}
+
+function copyLink(url) {
+    console.log(url);
+    window.clipboardData.setData("Text", url);
+    return false
 }
