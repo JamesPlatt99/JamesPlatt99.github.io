@@ -12,6 +12,15 @@ $(document).ready(function(){
     addMore();
 })
 
+$('#search').submit(function () {
+    clearGifs();
+    curCount = 1;
+    var searchTerm = "&q=" + document.getElementById('search').value;
+    curSearchTerm = URL + SEARCH_END_POINT + API_KEY + searchTerm;
+    addMore();
+    return false;
+});
+
 var waypoint = new Waypoint({
     element: document.getElementById('More'),
     handler: function() {
@@ -19,14 +28,6 @@ var waypoint = new Waypoint({
     },
     offset: (Waypoint.viewportHeight())
 })
-
-function searchGifs(){
-    clearGifs();
-    curCount = 1;
-    var searchTerm = "&q=" + document.getElementById('search').value;
-    curSearchTerm = URL + SEARCH_END_POINT + API_KEY + searchTerm;
-    addMore();
-}
 
 function addMore(){
     loading = true;
@@ -50,6 +51,7 @@ function populateGifs(){
         var imageUrl  = response.data[curResponse].images.original.url;
         var curImage = document.createElement("img");
         curImage.setAttribute("src", imageUrl);
+        curImage.setAttribute("alt", "Some GIF");
         curImage.setAttribute("onclick", "copyText('" + imageUrl + "')");
         curImage.setAttribute("class", "gif");
         $("#More").before(curImage);

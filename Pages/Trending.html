@@ -4,12 +4,15 @@
 <div id="ContentStandard">
     <div id="Title">
         <p>Trending</p>
-    </div>
+    </div><!-- a -->
     <body>
         <div id="Search">
-            <input type="text" id="search">
-            <button onclick="searchGifs()">Search</button>
-            <button onclick="clearGifs()">Clear</button>   
+            <form id="search">
+                <label>Search for Gif</label><br />
+                <input type="text" id="search">
+                <input type="submit" text="search" class="button">
+                <button onclick="clearGifs()" class="button">Clear</button>   
+            </form>
         </div>
         <div id="giphyResults"></div>
         <div id="More">
