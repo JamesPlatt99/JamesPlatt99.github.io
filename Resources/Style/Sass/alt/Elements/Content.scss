@@ -1,10 +1,22 @@
 @import 'fadeIn';
+$breakpoint: 1100px;
+$headerImageSize: 150px;    
 
 .Content{
+    @media (min-width: $breakpoint)  {
+        margin-left: 15%;
+        margin-top:275px;
+    }
+    @media (max-width: $breakpoint) {
+        margin-top: $headerImageSize + 25px;        
+        z-index: 1;
+        margin-left: 0px;        
+        margin-right: 0px;        
+        margin-bottom: 15%;
+        position: relative;
+    }
     @include fadeIn;
-    margin-top: 275px;
-	margin-right: 40px;
-	margin-left: 300px;
+    pointer-events: all;    
     min-height: 450px;
     background: rgb(255,255,255); /* for IE */
     background: rgba(255,255,255,0.55);

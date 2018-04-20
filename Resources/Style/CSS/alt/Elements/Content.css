@@ -37,13 +37,23 @@
   -o-animation: fadein 2.5s;
   /* Opera < 12.1 */
   animation: fadein 2.5s;
-  margin-top: 275px;
-  margin-right: 40px;
-  margin-left: 300px;
+  pointer-events: all;
   min-height: 450px;
   background: white;
   /* for IE */
   background: rgba(255, 255, 255, 0.55); }
+  @media (min-width: 1100px) {
+    .Content {
+      margin-left: 15%;
+      margin-top: 275px; } }
+  @media (max-width: 1100px) {
+    .Content {
+      margin-top: 175px;
+      z-index: 1;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 15%;
+      position: relative; } }
   .Content #Title {
     background-color: #131313;
     color: #f3f3f3;

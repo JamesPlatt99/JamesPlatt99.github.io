@@ -56,8 +56,6 @@
   padding-bottom: 15px; }
 
 .gif {
-  width: 25%;
-  min-width: 150px;
   -webkit-animation: fadein 2.5s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2.5s;
@@ -67,6 +65,14 @@
   -o-animation: fadein 2.5s;
   /* Opera < 12.1 */
   animation: fadein 2.5s; }
+  @media (min-width: 1100px) {
+    .gif {
+      width: 25%;
+      min-width: 300px; } }
+  @media (max-width: 1100px) {
+    .gif {
+      width: 50%;
+      min-width: 300px; } }
   .gif:hover {
     cursor: pointer; }
   .gif:active {

@@ -31,49 +31,27 @@ html, body {
   padding: 0px; }
 
 #Header {
+  height: 100%;
   position: fixed;
+  width: 100%;
   left: 0px;
   top: 0px;
-  width: 100%;
-  height: 100%;
   box-sizing: border-box;
-  z-index: -1;
   align-content: center;
-  background-color: #362e2e;
-  background-image: url("https://i2.wp.com/www.algiz-technology.com/wp-content/uploads/2016/05/triangle-background.png?ssl=1");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: cover; }
+  pointer-events: none;
+  margin: 0; }
+  @media (max-width: 1100px) {
+    #Header {
+      z-index: 10; } }
+  @media (min-width: 1100px) {
+    #Header {
+      z-index: -1; } }
 
 #HeaderText {
   font-size: 16pt;
-  margin-top: 13px;
-  margin-left: 17px;
   letter-spacing: 2;
   color: #f3f3f3;
-  float: left;
-  -webkit-animation: fadein 5s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 5s;
-  /* Internet Explorer */
-  -o-animation: fadein 5s;
-  /* Opera < 12.1 */
-  animation: fadein 5s;
-  position: absolute;
-  bottom: 13px; }
-
-#HeaderDesc {
-  letter-spacing: 2;
-  color: #f3f3f3;
-  float: left;
-  font-size: 8pt;
-  font-style: italic; }
-
-#Image {
-  margin: 25px;
-  margin-left: 50px;
+  pointer-events: none;
   -webkit-animation: fadein 5s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 5s;
@@ -83,7 +61,47 @@ html, body {
   -o-animation: fadein 5s;
   /* Opera < 12.1 */
   animation: fadein 5s; }
+  @media (min-width: 1100px) {
+    #HeaderText {
+      bottom: 13px;
+      margin-top: 13px;
+      margin-left: 17px;
+      position: absolute; } }
+  @media (max-width: 1100px) {
+    #HeaderText {
+      top: 0px;
+      width: 100%;
+      height: 75px;
+      margin: 0px;
+      padding-top: 25px;
+      padding-left: 200px;
+      position: fixed;
+      background-color: rgba(34, 136, 136, 0.95); } }
+
+#HeaderDesc {
+  pointer-events: none;
+  letter-spacing: 2;
+  color: #f3f3f3;
+  float: left;
+  font-size: 8pt;
+  font-style: italic; }
+
+#Image {
+  margin-left: 25px;
+  z-index: 999;
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s;
+  position: fixed;
+  pointer-events: none; }
   #Image img {
+    pointer-events: all;
     margin-top: 0px;
     height: 150px;
     width: 150px;
@@ -100,7 +118,8 @@ html, body {
     #Image img:active {
       animation: spin 100s forwards; }
     #Image img:hover {
-      box-shadow: 0 0 50px 20px rgba(255, 78, 0, 0.3); }
+      box-shadow: 0 0 50px 20px rgba(255, 78, 0, 0.3);
+      cursor: pointer; }
       #Image img:hover ~ .tooltiptext {
         opacity: 1; }
     #Image img:active ~ .tooltiptext {
@@ -115,7 +134,8 @@ html, body {
     opacity: 0;
     transition: opacity 1.5s;
     position: absolute;
-    z-index: 1; }
+    z-index: 1;
+    pointer-events: none; }
 
 #DateDisplay {
   color: #f3f3f3;
@@ -125,10 +145,17 @@ html, body {
   left: 0px;
   transition: transform .8s ease-in-out;
   -webkit-transition: -webkit-transform .8s ease-in-out;
-  margin-top: -100px;
-  font-size: 64pt;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  pointer-events: none; }
+  @media (max-width: 1100px) {
+    #DateDisplay {
+      margin-top: 25%;
+      font-size: 32; } }
+  @media (min-width: 1100px) {
+    #DateDisplay {
+      margin-top: -100px;
+      font-size: 64pt; } }
 
 @keyframes spin {
   from {

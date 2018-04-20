@@ -1,16 +1,29 @@
+$breakpoint: 1100px;
+
 #menu{
-    width: 40%;
-    float: center;
-    bottom: 0px;
+    @media (min-width: $breakpoint)  {
+        right: 40px;
+    }
+    @media (max-width: $breakpoint)  {
+        background-color: rgba(#228888, 0.95);
+        left:0;
+        right:0;        
+        height:fit-content;
+        // height:5%;
+    }
+    pointer-events: none;    
+    bottom:0px;
+    padding-bottom: 13px;
+    width:100%;
     padding: 0px;
+    z-index: 999;
     position: fixed;
-    bottom: 13px;
-    right: 40px;
+    float: center;
+
     li a{
-        display: block;
-        float:left;
+        pointer-events: all;        
+        float:right;
         text-align: center;
-        line-height: 20px;
         min-width: 120px;
         padding: 8px;
         border-right: 3px;
@@ -26,7 +39,7 @@
     }
     ul {
         list-style-type: none;
-        margin: 50px;
+        margin-right: 50px;
         padding: 0;
     }
 }
