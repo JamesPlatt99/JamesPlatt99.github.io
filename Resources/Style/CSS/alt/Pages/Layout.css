@@ -1,10 +1,9 @@
-#Left {
-  float: left;
-  overflow: hidden; }
+#flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left; }
 
-#Right {
-  margin-left: 275px;
-  width: 600px;
-  overflow: hidden; }
+#block {
+  padding-right: 4vw; }
 
 /*# sourceMappingURL=Layout.css.map */

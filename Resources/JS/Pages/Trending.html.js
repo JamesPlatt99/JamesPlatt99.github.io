@@ -33,6 +33,7 @@ function addMore(){
     loading = true;
     searchTermWithOffset = curSearchTerm + "&offset=" + curCount;
     generateRequest();
+    return false;
 }
 
 function generateRequest(){

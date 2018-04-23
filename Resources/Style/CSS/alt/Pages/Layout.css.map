@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,KAAK;EACD,KAAK,EAAE,IAAI;EACX,QAAQ,EAAE,MAAM;;AAEpB,MAAM;EACF,WAAW,EAAC,KAAK;EACjB,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,MAAM",
+"mappings": "AAAA,cAAc;EACV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;EACnB,eAAe,EAAE,IAAI;;AAEzB,MAAM;EACF,aAAa,EAAC,GAAG",
 "sources": ["../../../Sass/alt/Pages/Layout.scss"],
 "names": [],
 "file": "Layout.css"

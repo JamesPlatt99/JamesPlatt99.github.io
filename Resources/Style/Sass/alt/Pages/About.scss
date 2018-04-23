@@ -1,6 +1,11 @@
 #SubHeading{
-    font-size:13.5pt;
     font-style: oblique;
+    @media (min-width: $breakpoint)  {
+        font-size:18.5px;
+    }
+    @media (max-width: $breakpoint)  {
+        font-size: calc(11px + 2vw);        
+    }
 }
 #Text{
     margin-left:15px;

@@ -92,7 +92,6 @@ html, body {
       z-index: -1; } }
 
 #HeaderText {
-  font-size: 16pt;
   letter-spacing: 2;
   color: #f3f3f3;
   pointer-events: none;
@@ -110,25 +109,33 @@ html, body {
       bottom: 13px;
       margin-top: 13px;
       margin-left: 17px;
-      position: absolute; } }
+      position: absolute;
+      font-size: 16pt; } }
   @media (max-width: 1100px) {
     #HeaderText {
       top: 0px;
       width: 100%;
       height: 75px;
       margin: 0px;
-      padding-top: 25px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
       padding-left: 200px;
       position: fixed;
-      background-color: rgba(19, 19, 19, 0.95); } }
+      background-color: rgba(19, 19, 19, 0.95);
+      font-size: calc(12px + (24 - 12) * ( (100vw - 400px) / ( 800 - 400) )); } }
 
 #HeaderDesc {
   pointer-events: none;
   letter-spacing: 2;
   color: #f3f3f3;
   float: left;
-  font-size: 8pt;
   font-style: italic; }
+  @media (min-width: 1100px) {
+    #HeaderDesc {
+      font-size: 8pt; } }
+  @media (max-width: 1100px) {
+    #HeaderDesc {
+      font-size: calc(7px + (18 - 7) * ( (100vw - 400px) / ( 800 - 400) )); } }
 
 #Image {
   margin-left: 25px;
@@ -220,28 +227,45 @@ html, body {
       right: 40px; } }
   @media (max-width: 1100px) {
     #menu {
-      background-color: rgba(19, 19, 19, 0.95);
       left: 0;
       right: 0;
-      height: fit-content; } }
+      height: fit-content;
+      font-size: calc(12px + (18 - 12) * ( (100vw - 400px) / ( 800 - 400) )); } }
   #menu li a {
     pointer-events: all;
     float: right;
     text-align: center;
-    min-width: 120px;
-    padding: 8px;
     border-right: 3px;
     color: #f3f3f3;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: rgba(19, 19, 19, 0.95);
+    list-style-position: inside;
+    border-right: 1px solid #f3f3f3;
+    padding-top: 5px;
+    padding-bottom: 5px; }
     #menu li a:hover {
-      border-radius: 6px;
-      background-color: rgba(0, 0, 0, 0.1); }
+      background-color: rgba(21, 85, 85, 0.95); }
     #menu li a:active {
-      background-color: rgba(0, 0, 0, 0.25); }
+      background-color: rgba(21, 85, 85, 0.6); }
+    @media (min-width: 1100px) {
+      #menu li a {
+        min-width: 150px; } }
+    @media (max-width: 1100px) {
+      #menu li a {
+        width: 22vw; } }
   #menu ul {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: right;
     list-style-type: none;
     margin-right: 50px;
     padding: 0; }
+    @media (max-width: 1100px) {
+      #menu ul {
+        left: 0;
+        right: 0;
+        display: table;
+        width: 100%; } }
 
 @keyframes spin {
   from {
@@ -306,10 +330,21 @@ html, body {
       position: relative; } }
   .Content #Title {
     background-color: #131313;
-    color: #f3f3f3;
-    font-size: 24pt; }
+    color: #f3f3f3; }
+    @media (min-width: 1100px) {
+      .Content #Title {
+        font-size: 24px; } }
+    @media (max-width: 1100px) {
+      .Content #Title {
+        font-size: calc(14px + 2vw); } }
   .Content #body {
     margin-top: -20px; }
+    @media (min-width: 1100px) {
+      .Content #body {
+        font-size: 14px; } }
+    @media (max-width: 1100px) {
+      .Content #body {
+        font-size: calc(11pt + 1vw); } }
 
 .ContentGreatWebsite {
   margin: 0px;
@@ -334,8 +369,13 @@ iframe {
   width: 100%; }
 
 #SubHeading {
-  font-size: 13.5pt;
   font-style: oblique; }
+  @media (min-width: 1100px) {
+    #SubHeading {
+      font-size: 18.5px; } }
+  @media (max-width: 1100px) {
+    #SubHeading {
+      font-size: calc(11px + 2vw); } }
 
 #Text {
   margin-left: 15px; }
@@ -410,7 +450,8 @@ iframe {
   @media (min-width: 1100px) {
     .gif {
       width: 25%;
-      min-width: 300px; } }
+      min-width: 300px;
+      max-width: 800px; } }
   @media (max-width: 1100px) {
     .gif {
       width: 50%;
@@ -448,13 +489,15 @@ iframe {
     position: fixed;
     height: 3%; }
 
-#Left {
-  float: left;
-  overflow: hidden; }
+#giphyResults {
+  display: flex; }
 
-#Right {
-  margin-left: 275px;
-  width: 600px;
-  overflow: hidden; }
+#flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left; }
+
+#block {
+  padding-right: 4vw; }
 
 /*# sourceMappingURL=style.css.map */

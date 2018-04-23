@@ -24,3 +24,22 @@ function getUrlParameter(param) {
     }
     return null;
 };
+
+$(document).on('pageinit', function(event){
+    $("#Header").swiperight(function() {
+        console.log("test");
+        loadNextPage(-1);
+    });
+    $("#Header").swipeleft(function() {
+        console.log("test");        
+        loadNextPage(1);
+    });
+});
+
+function loadNextPage(dir){
+    console.log(test);
+    var page = getUrlParameter('page')
+    var index = pages.indexOf(page);
+    loadPage(pages[(index + dir) % pages.length]);    
+    return false;
+} 

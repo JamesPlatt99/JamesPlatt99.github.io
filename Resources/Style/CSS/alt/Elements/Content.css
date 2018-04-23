@@ -56,10 +56,21 @@
       position: relative; } }
   .Content #Title {
     background-color: #131313;
-    color: #f3f3f3;
-    font-size: 24pt; }
+    color: #f3f3f3; }
+    @media (min-width: 1100px) {
+      .Content #Title {
+        font-size: 24px; } }
+    @media (max-width: 1100px) {
+      .Content #Title {
+        font-size: calc(14px + 2vw); } }
   .Content #body {
     margin-top: -20px; }
+    @media (min-width: 1100px) {
+      .Content #body {
+        font-size: 14px; } }
+    @media (max-width: 1100px) {
+      .Content #body {
+        font-size: calc(11pt + 1vw); } }
 
 .ContentGreatWebsite {
   margin: 0px;

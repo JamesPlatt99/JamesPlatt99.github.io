@@ -21,12 +21,24 @@ $headerImageSize: 150px;
     background: rgb(255,255,255); /* for IE */
     background: rgba(255,255,255,0.55);
     #Title{
+        @media (min-width: $breakpoint)  {
+            font-size:24px;
+        }
+        @media (max-width: $breakpoint)  {
+            font-size: calc(14px + 2vw);        
+        }
+        
         background-color: #131313;
         color: #f3f3f3;
-        font-size: 24pt;
     }
     #body{
         margin-top: -20px;
+        @media (min-width: $breakpoint)  {
+            font-size:14px;
+        }
+        @media (max-width: $breakpoint)  {
+            font-size: calc(11pt + 1vw);        
+        }
     }
 }
 .ContentGreatWebsite{
@@ -35,7 +47,6 @@ $headerImageSize: 150px;
     color: #ff0000;
     font-family: "Comic Sans MS", cursive, sans-serif;
     background-color: #550000;
-    // background-image: url("../../Images/Pages/GreatWebsites/background.gif");
     a{
         color: #ff00ff;
     }
