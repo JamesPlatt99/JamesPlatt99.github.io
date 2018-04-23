@@ -8,7 +8,7 @@ $breakpoint: 1100px;
         left:0;
         right:0;        
         height:fit-content;
-        font-size: calc(12px + (18 - 12) * ( (100vw - 400px) / ( 800 - 400) ));          
+        font-size: calc(11pt + (26 - 11) * ( (100vw - 400px) / ( 800 - 400) ));          
     }
     pointer-events: none;    
     bottom:0px;
@@ -29,8 +29,6 @@ $breakpoint: 1100px;
         background-color: rgba(#131313, 0.95);            
         list-style-position:inside;
         border-right: 1px solid #f3f3f3;
-        padding-top: 5px;
-        padding-bottom: 5px;
         &:hover {
             background-color: rgba(#155555, 0.95);            
         }
@@ -39,9 +37,13 @@ $breakpoint: 1100px;
         }
         @media (min-width: $breakpoint)  {
             min-width: 150px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
         @media (max-width: $breakpoint)  {
             width: 22vw;
+            padding-top: 1.4vh;
+            padding-bottom: 1.4vh;
         }
     }
     ul {

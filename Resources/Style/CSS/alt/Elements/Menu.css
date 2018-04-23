@@ -15,7 +15,7 @@
       left: 0;
       right: 0;
       height: fit-content;
-      font-size: calc(12px + (18 - 12) * ( (100vw - 400px) / ( 800 - 400) )); } }
+      font-size: calc(11pt + (26 - 11) * ( (100vw - 400px) / ( 800 - 400) )); } }
   #menu li a {
     pointer-events: all;
     float: right;
@@ -25,19 +25,21 @@
     text-decoration: none;
     background-color: rgba(19, 19, 19, 0.95);
     list-style-position: inside;
-    border-right: 1px solid #f3f3f3;
-    padding-top: 5px;
-    padding-bottom: 5px; }
+    border-right: 1px solid #f3f3f3; }
     #menu li a:hover {
       background-color: rgba(21, 85, 85, 0.95); }
     #menu li a:active {
       background-color: rgba(21, 85, 85, 0.6); }
     @media (min-width: 1100px) {
       #menu li a {
-        min-width: 150px; } }
+        min-width: 150px;
+        padding-top: 5px;
+        padding-bottom: 5px; } }
     @media (max-width: 1100px) {
       #menu li a {
-        width: 22vw; } }
+        width: 22vw;
+        padding-top: 1.4vh;
+        padding-bottom: 1.4vh; } }
   #menu ul {
     display: flex;
     flex-flow: row-reverse;

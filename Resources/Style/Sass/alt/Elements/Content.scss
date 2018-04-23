@@ -37,7 +37,8 @@ $headerImageSize: 150px;
             font-size:14px;
         }
         @media (max-width: $breakpoint)  {
-            font-size: calc(11pt + 1vw);        
+            padding:1vh;        
+            font-size: calc(8pt + 1vw);        
         }
     }
 }
