@@ -139,6 +139,8 @@ html, body {
 
 #Image {
   margin-left: 25px;
+  margin-top: 10px;
+  margin-left: 25px;
   z-index: 999;
   -webkit-animation: fadein 5s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -152,6 +154,7 @@ html, body {
   position: fixed;
   pointer-events: none; }
   #Image img {
+    animation: 5s ease-out 0s 1 spinInFromLeft;
     pointer-events: all;
     margin-top: 0px;
     height: 150px;
@@ -213,6 +216,11 @@ html, body {
     transform: scale(1) skew(0deg) rotate(0deg); }
   to {
     transform: scale(140) skew(0deg) rotate(36000deg); } }
+@keyframes spinInFromLeft {
+  0% {
+    transform: translateX(-150%) rotate(0deg); }
+  100% {
+    transform: translateX(0) rotate(720deg); } }
 #menu {
   pointer-events: none;
   bottom: 0px;
