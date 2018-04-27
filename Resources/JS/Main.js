@@ -10,6 +10,15 @@ $(document).ready(function(){
         page = "Home";
     }
     loadPage(page);
+    var content = document.getElementById('Menu');
+    content.addEventListener('swiperight', function (event) {
+        console.log("test");
+        loadNextPage(-1);
+    });
+    content.addEventListener('swipeleft', function (event) {
+        console.log("test");
+        loadNextPage(1);
+    }); 
 });
 
 function getUrlParameter(param) {
@@ -24,17 +33,6 @@ function getUrlParameter(param) {
     }
     return null;
 };
-
-$(document).on('pageinit', function(event){
-    $("#Header").swiperight(function() {
-        console.log("test");
-        loadNextPage(-1);
-    });
-    $("#Header").swipeleft(function() {
-        console.log("test");        
-        loadNextPage(1);
-    });
-});
 
 function loadNextPage(dir){
     console.log(test);
