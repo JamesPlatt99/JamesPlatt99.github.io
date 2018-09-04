@@ -1,4 +1,4 @@
 $(window).load(function() {
   // When the page has loaded
-  $(".NavBar").show();
+  $(".NavBar").style.visibility = "visible";
 });
